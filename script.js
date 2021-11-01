@@ -21,5 +21,5 @@ function calc(a, b, operator) {
     return result;
 }
 
-let result = (calc(9, 0, 'divide'))
+let result = (calc(9, 2, 'divide'))
 console.log(result);
