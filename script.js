@@ -3,8 +3,6 @@ function calc(a, b, operator) {
     const isNotValid = (typeof a != 'number') || (typeof b != 'number');
     if (isNotValid) {
         result = 'Error!'
-    } else if (!operator) {
-        result = 'Unknown operator'
     } else if (operator === 'sum') {
         result = a + b
     } else if (operator === 'min') {
@@ -17,9 +15,11 @@ function calc(a, b, operator) {
         } else {
             result = a / b
         }
+    } else {
+        result = 'Unknown operator'
     }
     return result;
 }
 
-let result = (calc(9, 2, 'divide'))
+let result = (calc(9, 0, 'sum'))
 console.log(result);
