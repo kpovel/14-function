@@ -1,25 +1,22 @@
 function calc(a, b, operator) {
-    let result;
     const isNotValid = (typeof a != 'number') || (typeof b != 'number');
     if (isNotValid) {
-        result = 'Error!'
+        return 'Error!'
     } else if (operator === 'sum') {
-        result = a + b
+        return a + b
     } else if (operator === 'min') {
-        result = a - b
-    } else if (operator === 'multi') {
-        result = a * b
-    } else if (operator === 'divide') {
+        return a - b
+    } else if (operator === 'mult') {
+        return a * b
+    } else if (operator === 'div') {
         if (b === 0) {
-            result = 'Division by zero is imposible'
+            return 'Division by zero is impossible'
         } else {
-            result = a / b
+            return a / b
         }
     } else {
-        result = 'Unknown operator'
+        return 'Unknown operator'
     }
-    return result;
 }
 
-let result = (calc(9, 0, 'sum'))
-console.log(result);
+console.log(calc(9, 0, 'sum'))
